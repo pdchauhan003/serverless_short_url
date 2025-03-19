@@ -65,23 +65,23 @@ const UrlSort = () => {
     >
       <div className="absolute inset-0 bg-gray-900 bg-opacity-80"></div>
       <div className="relative z-10 text-center w-full max-w-md">
-        <h1 className="text-4xl font-extrabold mb-4 text-orange-500 drop-shadow-lg">
+        <h1 className="text-4xl font-extrabold mb-4 text-blue-500 drop-shadow-lg">
           URL Shortener
         </h1>
         <p className="text-gray-300 mb-6 text-lg">
           Enter a long URL to get a shorter version that you can easily share.
         </p>
-        <div className="bg-gray-800 p-6 rounded-xl shadow-2xl w-full border border-orange-500">
+        <div className="bg-gray-800 p-6 rounded-xl shadow-2xl w-full border border-blue-500">
           <input
             type="text"
-            className="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your URL here"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
           <button
-            className="w-full mt-4 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition flex items-center justify-center shadow-md hover:shadow-lg disabled:opacity-50"
+            className="w-full mt-4 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition flex items-center justify-center shadow-md hover:shadow-lg disabled:opacity-50"
             onClick={handleSubmit}
             disabled={loading}
           >
@@ -96,20 +96,20 @@ const UrlSort = () => {
           </button>
           {shortUrl && (
             <div className="mt-4 p-3 bg-gray-700 text-center rounded-lg border border-gray-600 flex justify-between items-center shadow-lg">
-              <span className="text-orange-400 font-semibold mr-2">
+              <span className="text-blue-400 font-semibold mr-2">
                 Short URL:
               </span>
               <a
                 href={shortUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-300 underline break-all flex-1 text-left"
+                className="text-blue-300 underline break-all flex-1 text-left"
               >
                 {shortUrl}
               </a>
               <button
                 onClick={handleCopy}
-                className="ml-2 text-orange-400 hover:text-orange-300 transition p-2 rounded-md bg-gray-800 hover:bg-gray-600"
+                className="ml-2 text-blue-400 hover:text-blue-300 transition p-2 rounded-md bg-gray-800 hover:bg-gray-600"
               >
                 <ClipboardCopy size={20} />
               </button>
